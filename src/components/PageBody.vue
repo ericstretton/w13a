@@ -1,29 +1,34 @@
 <template>
-    <div>
-        <p>Let's see what cool stuff we can put in here</p>
+    <div id="bodyGrid">
+        <MeetTheTeam/>
         <BodyMeetTheDeveloper/>
+        <RandomSidePanel/>
+
     </div>
 </template>
 
 <script>
 import BodyMeetTheDeveloper from './BodyMeetTheDeveloper.vue'
-import BodyMeetTheDeveloperVue from './BodyMeetTheDeveloper.vue'
+import MeetTheTeam from './MeetTheTeam.vue'
+import RandomSidePanel from './RandomSidePanel.vue'
     export default {
-  components: { BodyMeetTheDeveloper },
-        BodyMeetTheDeveloperVue,
+  components: { BodyMeetTheDeveloper,
+                MeetTheTeam,
+                RandomSidePanel },
+        
     }
 </script>
 
 <style scoped>
-*{
+#bodyGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#meetTheDeveloper{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
-p{
-    grid-row-start: 0;
-    grid-column-start: 0;
-    grid-column-end: 3;
-}
+
 
 </style>
